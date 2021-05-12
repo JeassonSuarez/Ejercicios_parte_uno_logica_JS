@@ -32,44 +32,7 @@ const contarCaracteres1 = (texto) =>
 
 contarCaracteres1(text1)
 
-/*
-2- Mostrar tantos caracteres como indique el usuario
-*/
 
-let text2="Hola Mundo";
-let caracteresAMostrar = 4;
-
-const mostrarCaracteres=function(texto, cantidad){
-    
-    if (caracteresAMostrar>text2.length) {
-
-        console.log("El numero de caracteres indicado supera el total de caracteres de la cadena.");
-
-    } else {
-
-        let mostrar;
-
-        for (let i = 0; i < caracteresAMostrar; i++) {
-            
-            if (mostrar===undefined) {
-
-                mostrar = text2.charAt(i);
-
-            }else{
-
-                mostrar += text2.charAt(i);
-
-            }
-
-        }
-
-        console.log(mostrar);
-
-    }
-        
-}
-
-mostrarCaracteres(text2, caracteresAMostrar);
 
 /*
 3- Programa una función que dada una String te devuelva un 
