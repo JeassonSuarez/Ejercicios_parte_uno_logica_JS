@@ -34,23 +34,7 @@ contarCaracteres1(text1)
 
 
 
-/*
-3- Programa una función que dada una String te devuelva un 
-Array de textos separados por cierto caracter, 
-pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
-*/
 
-let texto3 = "hola que tal";
-let carac = " ";
-
-
-const entregarArreglo = function(texto, caracterSep){
-    
-    console.log(texto.split(caracterSep));
-  
-}
-
-entregarArreglo(texto3, carac);
 
 /*
 4- Programa una función que repita un texto X veces, 
