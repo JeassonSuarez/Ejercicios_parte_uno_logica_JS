@@ -14,41 +14,18 @@
     </header>
     
     <section>
+        
         <h4>Programa una función que cuente el 
             número de caracteres de una cadena de texto, 
             pe. miFuncion("Hola Mundo") devolverá 10.</h4>
         
             <input type="text" name="texto" id="texto">
+            <br>
             <input type="submit" value="Calcular numero de caracteres del texto" onclick="devolverNumCaract()">
+            <br>
             <input type="text" name="numCaracteres" id="numCaracteres">
         
     </section>
-
+    <script src="CaracteresTexto.js"></script>
 </body>
-
-<script>
-    
-    let text1 
-    let numCaracteres
-
-    const traerTexto = () =>{
-
-        text1 = document.getElementById("texto").value
-        return contarCaracteres(text1)
-
-    }
-   
-    const contarCaracteres = function(texto){
-
-        return texto.length
-
-    }
-
-    const devolverNumCaract = () => {
-
-        document.getElementById("numCaracteres").value=traerTexto()
-
-    }
-
-</script>
 </html>
