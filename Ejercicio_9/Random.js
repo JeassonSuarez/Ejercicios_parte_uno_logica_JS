@@ -14,4 +14,4 @@ const validar = (min , max) =>
             ?window.alert("Digite el valor minimo")
             :(max === "")
                 ?window.alert("Digite el valor maximo")
-                :document.getElementById("aleatorio").value =(Math.random()*(max-min))+min
+                :document.getElementById("aleatorio").value =Math.floor((Math.random()*(max-min))+min)
