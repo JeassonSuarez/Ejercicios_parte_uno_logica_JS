@@ -1,10 +1,14 @@
-let palabra
+
 let palInversa 
+let palabra
 
 const traer = () =>{
+    
     palInversa = undefined
     palabra = document.getElementById("texto").value
+    palabra=palabra.toLowerCase()
     validar(palabra)
+    window.alert(palabra)
 }
 
 const validar = (texto="") =>
