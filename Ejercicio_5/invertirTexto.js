@@ -3,6 +3,7 @@ let texto
 const traer = () => {
     
     texto = document.getElementById("texto").value
+    invertirTexto1(texto)
     validacion(texto)
     
 }
@@ -33,3 +34,11 @@ const invertirTexto = (texto) => {
     return mostrar 
 
 }
+
+
+/* forma profe jonmircha*/
+const invertirTexto1 = (texto) =>{
+    console.log(texto.split("").reverse().join(""))
+}
+
+
