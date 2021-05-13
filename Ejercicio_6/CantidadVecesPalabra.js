@@ -22,6 +22,8 @@ const validar = (texto = "", palabra = "") =>
 
 const contarPalabras = (texto, palabra) => {
 
+    palRep(document.getElementById("texto").value,document.getElementById("palRepetida").value)
+
     arreglo = texto.split(" ")
 
     for (let i = 0; i <= arreglo.length; i++)
@@ -30,5 +32,27 @@ const contarPalabras = (texto, palabra) => {
             :contador=contador
     
     return contador
+
+    
+}
+
+
+
+
+//metodo profe jon 
+
+const palRep = (texto, palabra) =>{
+
+    let cont = 0
+    let i = 0
+    while (i!==-1) {
+        i = texto.indexOf(palabra, i)
+        if (i!==-1) {
+            i++
+            cont++
+        }
+    }
+    
+    console.info(`El numero de veces que aparece la palabra ${palabra} es ${cont}`)
 
 }
