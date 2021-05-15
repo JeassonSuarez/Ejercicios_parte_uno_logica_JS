@@ -4,7 +4,6 @@ const traer = () => {
     document.getElementById("primo").value = ""
     numero = document.getElementById("numero").value
     validar(numero)
-    
 }
 
 const validar = (numero) =>
