@@ -1,6 +1,10 @@
 let arreglo 
-
+let esArreglo
+let esPotencia
 const traer = () =>{
+    esArreglo = 0
+    document.getElementById("aCuadrado").value = null
+    esPotencia =false
     //document.getElementById("aCuadrado").value = null
     arreglo = document.getElementById("arreglo").value.split(",")
     potencia = document.getElementById("potencia").value
@@ -9,40 +13,29 @@ const traer = () =>{
 }
 
 const validar = (arreglo = "", potencia = 0) =>{
-    let esArreglo = 0
-    
-    for (let i = 0; i < arreglo.length; i++) {
-    
-        if (arreglo[i]==="") {
-            esArreglo = 0
-            //console.log("1");
-        }else if (isNaN(Math.pow(arreglo[i], potencia))) {
-            esArreglo = 0
-            //console.log("2");
+    for (const valor of arreglo) {
+        if (isNaN(valor*valor) || /( )/g.test(valor) || valor === "") {
+            esArreglo = 0  
         }else{
-            for (let j = 0; j < arreglo[i].length; j++) {
-                if((/()/.test(arreglo[i].charAt(j)))){
-                    //console.log(arreglo[i].charAt(j));
-                    if (arreglo[i].charAt(j)=== " ") {
-                        esArreglo--
-                    }else{
-                        esArreglo++
-                    }
-                    //console.log("3");
-                }
-            }
+            esArreglo++
         }
-        //console.log(typeof arreglo[i], esArreglo, arreglo.length)
-        
     }
 
-    if (esArreglo !== arreglo.length) {
-        alert("Un valor digitado no es numero")
-    }else if (esArreglo === arreglo.length) {
-        document.getElementById("aCuadrado").value = elevarArreglo(arreglo, potencia)
+    if (isNaN(potencia*potencia) || /( )/g.test(potencia) || potencia === "") {
+        esPotencia = false 
+    }else{
+        esPotencia = true
     }
-    
-    
+
+    if (esArreglo === arreglo.length && esPotencia === true) {
+        document.getElementById("aCuadrado").value = elevarArreglo(arreglo, potencia)
+    }else{
+        if (esArreglo !== arreglo.length) {
+            alert("No coincide con el formato de un arreglo")
+        }else{
+            alert("El valor de potencia no es un numero")
+        }
+    }
 }
 
 const elevarArreglo = (arreglo = "", potencia = 0) => {
@@ -54,7 +47,15 @@ const elevarArreglo = (arreglo = "", potencia = 0) => {
         arreglo2.push(Math.pow(arreglo[i], potencia))
 
     }
-
+    //cuadrado(arreglo, potencia)
     return arreglo2.join(",")
     
+}
+
+
+//metodo para realizar operaciones con valores de un array 
+
+const cuadrado = (arreglo, potencia) =>{
+   const arregloCuad = arreglo.map(elevacuadrado => Math.pow(elevacuadrado, potencia))
+    console.log(arregloCuad);
 }
