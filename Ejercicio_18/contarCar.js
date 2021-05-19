@@ -12,7 +12,9 @@ const traer = () =>{
 const validar = (texto) =>
     (texto==="")
         ?window.alert("Debe ingresar un texto")
-        :contarCaracteres(texto)
+        :(parseFloat(texto))
+            ?alert("El texto ingresado no es una cadena")
+            :contarCaracteres(texto)
 
 const contarCaracteres = (texto) => {
 
