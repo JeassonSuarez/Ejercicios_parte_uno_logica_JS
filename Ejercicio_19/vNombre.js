@@ -8,7 +8,9 @@ const traer = () => {
 const validarIngreso = (nombre = "") =>
     (!nombre)
         ?window.alert(`Debe ingresar un nombre`)
-        :document.getElementById("respuesta").value = validarNombre(nombre)
+        :(parseFloat(nombre))
+            ?alert("Los numeros no tienen formato de nombre")
+            :document.getElementById("respuesta").value = validarNombre(nombre)
 
 const validarNombre = (nombre = "") => {
 
