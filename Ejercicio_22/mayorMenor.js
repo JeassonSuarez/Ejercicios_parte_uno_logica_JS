@@ -11,6 +11,7 @@ const traer = () =>{
 }
 
 const validar = (arreglo) =>{
+    maxmin(arreglo)
     for (const valor of arreglo) {
         //console.log(valor);
         if (isNaN(valor*valor) || /\s/g.test(valor) || valor === "") {
@@ -28,6 +29,7 @@ const validar = (arreglo) =>{
         //onsole.log(`no es ${esNumeros}`);
         alert("No coincide con formato de arreglo de numeros")
     }
+
 }
 
 const mayorValor = (arreglo) =>{
@@ -56,4 +58,10 @@ const menorValor = (arreglo) =>{
         }
     }
     return menor
+}
+
+// spite operator ... en el metodo math.max y min
+
+const maxmin = (arreglo) =>{
+    console.log(`menor: ${Math.min(...arreglo)}\nmayor: ${Math.max(...arreglo)}`)
 }
