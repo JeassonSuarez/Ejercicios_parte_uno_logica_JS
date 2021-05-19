@@ -3,6 +3,8 @@ let mayor=0
 let menor=0
 let esNumeros
 const traer = () =>{
+    document.getElementById("mayor").value = null
+    document.getElementById("menor").value = null
     esNumeros = 0
     arreglo = document.getElementById("arreglo").value
     validar(arreglo.split(","))
@@ -12,7 +14,7 @@ const validar = (arreglo) =>{
     for (const valor of arreglo) {
         //console.log(valor);
         if (isNaN(valor*valor) || /\s/g.test(valor) || valor === "") {
-            esNumeros = 1
+            esNumeros = 0
         }else{
             console.log("f");
             esNumeros++
