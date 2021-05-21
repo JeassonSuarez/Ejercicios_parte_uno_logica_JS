@@ -4,6 +4,7 @@ let promedio
 
 const traer = () => {
     esArreglo = 0
+    document.getElementById("promedio").value = null
     arreglo = document.getElementById("arreglo").value.split(",")
     validar(arreglo)
 }
