@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Película</title>
+</head>
+<body>
+    <header>
+        <h1>Enunciado</h1>
+    </header>
+    <section>
+        <h4>
+            Programa una clase llamada Película.
+            <br>
+            <br>
+            La clase recibirá un objeto al momento de instanciarse con los siguentes datos: 
+            id de la película en IMDB, titulo, director, año de estreno, país o países de origen, 
+            géneros y calificación en IMBD.
+
+            <ul>
+                <li>Todos los datos del objeto son obligatorios.</li>
+                <li>Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 
+                    7 restantes números.</li>
+                <li>Valida que el título no rebase los 100 caracteres.</li>
+                <li>Valida que el director no rebase los 50 caracteres.</li>
+                <li>Valida que el año de estreno sea un número entero de 4 dígitos.</li>
+                <li>Valida que el país o paises sea introducidos en forma de arreglo.</li>
+                <li>Valida que los géneros sean introducidos en forma de arreglo.</li>
+                <li>Valida que los géneros introducidos esten dentro de los géneros aceptados*.</li>
+                <li>Crea un método estático que devuelva los géneros aceptados*.</li>
+                <li>Valida que la calificación sea un número entre 0 y 10 pudiendo ser 
+                    decimal de una posición.</li>
+                <li>Crea un método que devuelva toda la ficha técnica de la película.</li>
+                <li>Apartir de un arreglo con la información de 3 películas genera 3 
+                    instancias de la clase de forma automatizada e imprime la ficha técnica 
+                    de cada película.</li>
+            </ul>
+
+            Géneros Aceptados: Action, Adult, Adventure, Animation, Biography, Comedy, 
+            Crime, Documentary ,Drama, Family, Fantasy, Film Noir, Game-Show, History, 
+            Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, 
+            Sport, Talk-Show, Thriller, War, Western.
+        </h4>
+
+        <label for="idPelicula">Id de la película en IMDB: </label>
+        <input type="text" name="" id="idPelicula">
+        <br>
+        <label for="titulo">Título: </label>
+        <input type="text" id="titulo">
+        <br>
+        <label for="director">Director: </label>
+        <input type="text" id="director">
+        <br>
+        <label for="anioEstreno">Año de estreno: </label>
+        <input type="text" id="anioEstreno">
+        <br>
+        <label for="paises">Pais o paises de origen: </label>
+        <input type="text" id="paises">
+        <br>
+        <label for="generos">Géneros: </label>
+        <input type="text" id="generos">
+        <br>
+        <p id="generosAceptados"></p>
+        <label for="calificacion">Clasificación en IMDB: </label>
+        <input type="text" id="calificacion">
+        <label for="btn"></label>
+        <input type="button" value="Crear película" onclick="traer()">
+        
+        <h4>Ficha tecnica de la pelicula:</h4>
+        <h5>Id en formato IMDB:</h5>
+        <p id="idf"></p>
+        <h5>Titulo:</h5>
+        <p id="titulof"></p>
+        <h5>Director:</h5>
+        <p id="directorf"></p>
+        <h5>Año de estreño:</h5>
+        <p id="anioEstrenof"></p>
+        <h5>Pais de produccion:</h5>
+        <p id="paisf"></p>
+        <h5>Genero:</h5>
+        <p id="generof"></p>
+        <h5>Calificacion:</h5>
+        <p id="calificacionf"></p>
+    </section>
+    <script src="pelicula.js"></script>
+</body>
+</html>
